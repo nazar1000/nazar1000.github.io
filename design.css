@@ -1,0 +1,18 @@
+
+
+
+
+body {
+	background-color: black;
+	margin: 0;
+}
+
+#game {
+	width: auto;
+}
+
+#myCanvas {
+	background-color: grey;
+	
+	display: block;
+}

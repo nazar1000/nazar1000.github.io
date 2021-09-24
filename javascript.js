@@ -2993,44 +2993,44 @@ class Sound {
 }
 
 const tower = new Image();
-tower.src = "Art/Tower.png";
+tower.src = "art/Tower.png";
 
 const cursor = new Image();
-cursor.src = "Art/target_21.png";
+cursor.src = "art/target_21.png";
 
 const playerWeapons = new Image();
-playerWeapons.src = "Art/playerWeapons.png";
+playerWeapons.src = "art/playerWeapons.png";
 
 //Bullet
 const bulletsImg = new Image();
-bulletsImg.src = "Art/bullets.png";
+bulletsImg.src = "art/bullets.png";
 
 //Explosion
 const explosionMark = new Image();
-explosionMark.src = "Art/explosionMark.png";
+explosionMark.src = "art/explosionMark.png";
 
 const explosion1 = new Image();
-explosion1.src = "Art/Explosion.png";
+explosion1.src = "art/Explosion.png";
 
 const tankExplosion = new Image();
-tankExplosion.src = "Art/tankExplosion2.png";
+tankExplosion.src = "art/tankExplosion2.png";
 
 //Hud
 const topUI = new Image();
-topUI.src = "Art/Top UI green.png";
+topUI.src = "art/Top UI green.png";
 const bottomUI = new Image();
-bottomUI.src = "Art/Bottom UI green.png";
+bottomUI.src = "art/Bottom UI green.png";
 
 //Menu
 const menuImg = new Image();
-menuImg.src = "Art/bgMenu.png";
+menuImg.src = "art/bgMenu.png";
 
 const bg = new Image();
-bg.src = "Art/bg.png";
+bg.src = "art/bg.png";
 
 //Shop
 const bgShop = new Image();
-bgShop.src = "Art/bgShop.png";
+bgShop.src = "art/bgShop.png";
 
 //Tanks
 //Tank spreadsheets
@@ -3039,13 +3039,13 @@ bgShop.src = "Art/bgShop.png";
 //2 rows 4 each
 
 const tankTier1 = new Image();
-tankTier1.src = "Art/tanksTier1.png";
+tankTier1.src = "art/tanksTier1.png";
 const tankTier2 = new Image();
-tankTier2.src = "Art/tanksTier2.png";
+tankTier2.src = "art/tanksTier2.png";
 const tankTier3 = new Image();
-tankTier3.src = "Art/tanksTier3.png";
+tankTier3.src = "art/tanksTier3.png";
 const tankTier4 = new Image();
-tankTier4.src = "Art/tanksTier4.png";
+tankTier4.src = "art/tanksTier4.png";
 
 
 //Tank turrets spreadsheets
@@ -3053,13 +3053,13 @@ tankTier4.src = "Art/tanksTier4.png";
 //TX 400 TY 400
 // 2 rows 4 each
 const turretTier1 = new Image();
-turretTier1.src = "Art/turretsTier1.png";
+turretTier1.src = "art/turretsTier1.png";
 const turretTier2 = new Image();
-turretTier2.src = "Art/turretsTier2.png";
+turretTier2.src = "art/turretsTier2.png";
 const turretTier3 = new Image();
-turretTier3.src = "Art/turretsTier3.png";
+turretTier3.src = "art/turretsTier3.png";
 const turretTier4 = new Image();
-turretTier4.src = "Art/turretsTier4.png";
+turretTier4.src = "art/turretsTier4.png";
 
 const imageBlueprints = [tankTier1, tankTier2, tankTier3, tankTier4];
 

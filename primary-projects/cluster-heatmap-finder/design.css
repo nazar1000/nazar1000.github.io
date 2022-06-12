@@ -1,0 +1,50 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body #nav-container {
+	float: left;
+	background-color: red;
+}
+
+canvas {
+	border: 1px solid red;
+	/* display: block; */
+	/* object-fit: contain; */
+}
+
+#point-connector_UI form {
+	margin-left: 10px;
+}
+
+#point-connector_UI form ul {
+	overflow: auto;
+	padding: 0;
+}
+
+#point-connector_UI form ul li {
+	list-style-type: none;
+	margin: 5px 0;
+	float: left;
+	clear: both;
+}
+
+#point-connector_UI form ul li p{
+	float: right;
+	font-size: 15px;
+	font-weight: bold;
+	color: grey;
+	margin: 0;
+}
+
+
+#point-connector_UI form input {
+	width: 40px;
+	margin-right: 10px;
+	
+}
+
+	form #reset {
+		width: 60px !important;
+	}

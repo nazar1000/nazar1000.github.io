@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Years of experience in Building extensions, Loft and Refurbishment">
+	<meta name="keywords" content="Building extensions, Lofts, Refurbishment, West London">
+	<link rel="stylesheet" href="design.css">
+	<!-- <link rel="stylesheet" href="screen.css"> -->
+	<!-- <link rel="stylesheet" href="print.css"> -->
+	<!-- <script src="jquery-3.4.1.min.js"></script> -->
+	<title>Cluster finder</title>
+</head>
+
+<body>
+	<canvas></canvas>
+	<div id="point-connector_UI">
+		<form>
+			<h3>canvas settings</h3>
+			<p style="font-size: 12px; line-height: 0;">Click on the canvas to add point.</p>
+			<ul>
+				<li>
+					<label for="points-num">Number of points:</label>
+					<input type="number" id="num-of-points" name="numOfPoints" value="100"
+						onchange="noOfPoints = this.value; isReset=true">
+					<p>Number of points on the grid (resets grid).</p>
+				</li>
+				<li>
+					<label for="connection-dis">Connection distance:</label>
+					<input type="number" id="connection-dis" name="connectionDistance" value="50"
+						onchange="nodeDistance = this.value">
+					<p>Distance between points where nodes will connect.</p>
+				</li>
+				<li>
+					<label for="clusters-toggle">Clusters</label>
+					<input type="checkbox" id="clusters-toggle" name="toggleOption" checked
+						onchange="isClustersToggle = !isClustersToggle">
+					<p>Toggles cluster connections.</p>
+
+				</li>
+				<li>
+					<label for="heatmap-toggle">Heatmap</label>
+					<input type="checkbox" id="heatmap-toggle" name="toggleOption" checked
+						onchange="isHeatmapToggle = !isHeatmapToggle">
+					<p>Toggles visibility of heatmap.</p>
+				</li>
+				<li>
+					<label for="relative-centering-toggle">Relative centering</label>
+					<input type="checkbox" id="relative-centering-toggle" name="toggleOption" value="false"
+						onchange="isRelativeCentering = !isRelativeCentering">
+					<p>Adds biased to object outline based on the concentration of points. </p>
+				</li>
+				<li>
+					<input type="button" id="reset" value="Reset" onclick="isReset=true">
+				</li>
+			</ul>
+
+
+
+
+
+
+
+
+
+
+
+		</form>
+	</div>
+
+	<script src="javascript.js"></script>
+</body>

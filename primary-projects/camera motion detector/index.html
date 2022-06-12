@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="Made by nazar1000 (gitHub)">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="design.css">
+	<!-- <link rel="stylesheet" href="screen.css"> -->
+	<!-- <link rel="stylesheet" href="print.css"> -->
+	<!-- <script src="jquery-3.6.0.min.js"></script> -->
+	<title>Motion Sensor</title>
+</head>
+
+<!-- <?php -->
+<!-- // session_start(); -->
+<!-- ?> -->
+
+<body>
+	<div id="motion_detector_container">
+
+		<h1>Camera motion detector</h1>
+		<div id="canvas_container">
+
+			<!-- <form id="canvas_form" method="POST" onsubmit="event.preventDefault()"> -->
+			<!-- onsubmit="event.preventDefault()" -->
+			<form id="canvas_form" method="POST" action="http://127.0.0.1/server/Camera%20color%20detector/db.php">
+				<!-- action="http://127.0.0.1/server/Camera%20color%20detector/db.php" -->
+
+				<input class="form-input" type="text" name="date" value="">
+				<input class="form-input" type="text" name="time" value="">
+				<input class="form-input" type="text" name="color" value="">
+				<!-- <button name="form"> button</button> -->
+
+				<div id="canvas">
+					<canvas></canvas>
+				</div>
+			</form>
+
+
+		</div>
+		<div id="triggers-container">
+
+			<div id="triggers">
+				<div id="triggers-container_title">
+					<h3>Custom Areas</h3>
+				</div>
+
+				<div id="custom_area_message">
+					<h4>Toggle custom area and draw a rectangle on the canvas to add a custom area!</h4>
+				</div>
+
+			</div>
+			<div id="trigger_log">
+				<h3>Alert</h3>
+			</div>
+
+
+		</div>
+		<div id="controls">
+			<button onclick="playVid()" type="button">Play Video</button>
+			<button onclick="pauseVid()" type="button">Pause Video</button>
+			<button onclick="resetVid()" type="button">Reset</button>
+			<button onclick="printStats()" type="button">Check Stats</button><br>
+			<div id="stats_1">
+				<p>Fps: <span class="stats"></span></p>
+				<p>Usage: <span class="stats"></span></p>
+			</div>
+
+			<h3>Modes</h3>
+			Person:<input type="checkbox" class="mode_check" onclick="changeMode(0)">
+			Road:<input type="checkbox" class="mode_check" onclick="changeMode(1)">
+			Details:<input type="checkbox" class="mode_check" onclick="changeMode(2)">
+			Custom:<input type="checkbox" class="mode_check" onclick="changeMode(3)"> <br>
+
+			<h3>Settings</h3>
+			Custom area <input type="checkbox" class="show_grid" onclick="isCustomArea =! isCustomArea"> <label>
+				*Recommended</label> <br>
+			<hr>
+
+			<div class="pixel_setting">
+				<label>Grid size</label>
+				<input type="number" class="slider" min="1" max="10" value="4"
+					onchange="gridSize = parseInt(this.value)">
+				<label>Spacing or distance between checked pixel, (value 1 will cause every pixel to be
+					checked)</label>
+			</div>
+			<hr>
+			<div class="pixel_setting">
+				<label>Pixel sensitivity</label>
+				<input type="number" class="slider" id="sensitivity_slider" min="10" max="50" value="30"
+					onchange="pixelIgnoreRange = parseInt(this.value)" disabled>
+				<input type="checkbox" id="sensitivity_toggle" onchange="toggleAutoSensitivity()" checked>
+				<label>(normal auto) Pixels within specified range will be treated as background noise</label>
+			</div>
+			<hr>
+			<div class="pixel_setting">
+				<label>Node distance</label>
+				<input type="number" class="slider" min="10" max="100" value="60"
+					onchange="nodeDistance = parseInt(this.value)">
+				<label>Distance between individual pixels (low number Recommended</label>
+			</div>
+			<hr>
+			<div class="pixel_setting">
+				<label>Pixels for obj</label>
+				<input type="number" class="slider" min="1" max="30" value="5"
+					onchange="pixelsRequiredForObject = parseInt(this.value)">
+				<label>How many connected pixels are required to be treated as an object</label>
+			</div>
+			<hr>
+			<div class="pixel_setting">
+				<label>Min movement</label>
+				<input type="number" class="slider" min="1" max="20" value="5"
+					onchange="minimumMovements = parseInt(this.value)">
+				<label>How many pixels needs to change within object for the object to stay alive</label>
+			</div>
+
+
+
+			<h3>Debug</h3>
+			Show grid:<input type="checkbox" class="show_grid" onclick="showGrid = !showGrid">
+			Show Active grid:<input type="checkbox" class="show_grid" onclick="showActiveGrid = !showActiveGrid">
+		</div>
+
+		<div id="video-container">
+			<video type="video/mp4"></video>
+		</div>
+
+		<div>
+			<!-- <h1>Image</h1>
+			<img></img> -->
+		</div>
+	</div>
+
+
+	<script src="javascript.js"></script>
+	<script src="UI.js"></script>
+	<!-- <script src="ajax.js"></script> -->
+</body>

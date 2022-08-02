@@ -1,10 +1,4 @@
-A JS GAME
+## This is my github portfolio page where you can "demo" some of my projects
+- Currently there is only 3 projects but I plan to have more interactive projects as time goes on.
 
-This a little project I decided to do, as a part of my learning experience dealing with Javascript.
-
-Status:
-
-2) Updated "art" folder name and resource src to reflect that, in order to solve problem with gitHub page.
-
-1) The project has been started and mostly finished in local enviroments, buts since now 
-any updates will be made through gitHub.
+## You can check it out here: https://nazar1000.github.io/
